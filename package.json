@@ -1,0 +1,57 @@
+{
+  "name": "@redwerks/landing-typography-theme",
+  "version": "1.0.0",
+  "description": "A Typography.js theme used in Redwerks' landing page framework.",
+  "keywords": [
+    "typography",
+    "typography-theme",
+    "redwerks",
+    "redwerks-landing"
+  ],
+  "homepage": "https://github.com/redwerks/landing-typography-theme#readme",
+  "bugs": {
+    "url": "https://github.com/redwerks/landing-typography-theme/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redwerks/landing-typography-theme.git"
+  },
+  "license": "ISC",
+  "author": "Redwerks (https://redwerks.org/)",
+  "contributors": [
+    "Daniel Friesen <d@danf.ca>"
+  ],
+  "main": "./dist/index.js",
+  "module": "./es/index.js",
+  "types": "./dist/index.d.js",
+  "files": [
+    "dist",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc --target es5 --outDir dist && tsc --target es5 --module es2015 --outDir es",
+    "prepare": "npm run build",
+    "lint": "eslint --cache '*.{js}' --ext .js",
+    "pretty": "prettier --write '*.{js}'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && license-validator"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "eslint --cache --ext .js"
+    ]
+  },
+  "devDependencies": {
+    "@types/typography": "^0.16.3",
+    "typescript": "^3.7.5",
+    "typography": "^0.16.19"
+  },
+  "peerDependencies": {
+    "typography": "^0.16.19"
+  }
+}
