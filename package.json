@@ -1,6 +1,6 @@
 {
   "name": "@redwerks/landing-typography-theme",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "A Typography.js theme used in Redwerks' landing page framework.",
   "keywords": [
     "typography",
@@ -35,6 +35,9 @@
     "lint": "eslint --cache '*.{js}' --ext .js",
     "pretty": "prettier --write '*.{js}'",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "husky": {
     "hooks": {
