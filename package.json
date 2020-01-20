@@ -1,6 +1,6 @@
 {
   "name": "@redwerks/landing-typography-theme",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A Typography.js theme used in Redwerks' landing page framework.",
   "keywords": [
     "typography",
